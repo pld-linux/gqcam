@@ -74,12 +74,10 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 
 install gqcam $RPM_BUILD_ROOT%{_bindir}
 
-gzip -9nf CHANGES INSTALL README README.threads
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc CHANGES INSTALL README README.threads
 %attr(755,root,root) %{_bindir}/gqcam
