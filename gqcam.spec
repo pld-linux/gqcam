@@ -4,9 +4,11 @@ Version:	0.9
 Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
-BuildRequires:	gtk+-devel libjpeg-devel libpng-devel
-Source0:	http://cse.unl.edu/~cluening/gqcam/download/%{name}-%{version}.tar.bz2
+Source0:	http://cse.unl.edu/~cluening/gqcam/download/%{name}-%{version}.tar.gz
 URL:		http://cse.unl.edu/~cluening/gqcam/
+BuildRequires:	gtk+-devel
+BuildRequires:	libjpeg-devel
+BuildRequires:	libpng-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -46,21 +48,23 @@ If you have gotten it work with a camera not listed here, feel free to
 let him know at <cluenin1@bigred.unl.edu>
 
 %prep
-
 %setup -q
 
 %build
-%{__make}
+%{__make} CC="%{__cc} %{rpmcflags}" LD="%{__cc} %{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{_bindir}
-install -m 755 gqcam $RPM_BUILD_ROOT/%{_bindir}/gqcam
+install -d $RPM_BUILD_ROOT%{_bindir}
+
+install gqcam $RPM_BUILD_ROOT%{_bindir}
+
+gzip -9nf CHANGES INSTALL README README.threads
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc *.gz
 %attr(755,root,root) %{_bindir}/gqcam
-%doc COPYING CHANGES INSTALL README README.threads
