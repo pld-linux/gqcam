@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://cse.unl.edu/~cluening/gqcam/download/%{name}-%{version}.tar.gz
+# Source0-md5:	6e9ab1d86d96776bd5436b0e42a9e6b7
 URL:		http://cse.unl.edu/~cluening/gqcam/
 BuildRequires:	gtk+-devel
 BuildRequires:	libjpeg-devel
