@@ -65,7 +65,9 @@ Philips USB PCVC675K, Webcam III, TerraCAM USB, Plustek OptiCam 300U.
 %setup -q
 
 %build
-%{__make} CC="%{__cc} %{rpmcflags}" LD="%{__cc} %{rpmldflags}"
+%{__make} \
+	CC="%{__cc} %{rpmcflags}" \
+	LD="%{__cc} %{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
