@@ -1,5 +1,5 @@
 Summary:	A Linux clone of the QuickPict software that comes with the QuickCam
-Summary(pl):	Linuksowy klon oprogramowania QuickPict przychodz±cego z QuickCam
+Summary(pl.UTF-8):   Linuksowy klon oprogramowania QuickPict przychodzƒÖcego z QuickCam
 Name:		gqcam
 Version:	0.9
 Release:	2
@@ -47,18 +47,18 @@ about:
 If you have gotten it work with a camera not listed here, feel free to
 let him know at <cluenin1@bigred.unl.edu>
 
-%description -l pl
-Gqcam pozwala na uøywanie kamer internetowych pod Linuksem.
+%description -l pl.UTF-8
+Gqcam pozwala na u≈ºywanie kamer internetowych pod Linuksem.
 
-Moøliwo∂ci: kontrola jasno∂ci, kontrastu i balansu bieli, 3 ustawienia
-rozmiaru, 2 ustawienia g≥Íbi, zamraøanie obrazu, zrzucanie obrazu (do
-formatu PNG, PPM lub JPEG) - takøe sterowane timerem, interfejs z linii
-poleceÒ, obs≥uga czarno-bia≥ych i kolorowych kamer QuickCam, a takøe
-kamer opartych na CPiA oraz wiÍkszo∂ci innych obs≥uguj±cych polecenie
+Mo≈ºliwo≈õci: kontrola jasno≈õci, kontrastu i balansu bieli, 3 ustawienia
+rozmiaru, 2 ustawienia g≈Çƒôbi, zamra≈ºanie obrazu, zrzucanie obrazu (do
+formatu PNG, PPM lub JPEG) - tak≈ºe sterowane timerem, interfejs z linii
+polece≈Ñ, obs≈Çuga czarno-bia≈Çych i kolorowych kamer QuickCam, a tak≈ºe
+kamer opartych na CPiA oraz wiƒôkszo≈õci innych obs≈ÇugujƒÖcych polecenie
 read().
 
-Kamery o ktÛrych wiadomo, øe dzia≥aj±, to: Greyscale Quickcam i Color
-Quickcam; nie by≥y testowane: Ezonics EZcam, Creative Web-Cam II,
+Kamery o kt√≥rych wiadomo, ≈ºe dzia≈ÇajƒÖ, to: Greyscale Quickcam i Color
+Quickcam; nie by≈Çy testowane: Ezonics EZcam, Creative Web-Cam II,
 Philips USB PCVC675K, Webcam III, TerraCAM USB, Plustek OptiCam 300U.
 
 %prep
