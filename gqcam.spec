@@ -1,5 +1,5 @@
 Summary:	A Linux clone of the QuickPict software that comes with the QuickCam
-Summary(pl.UTF-8):   Linuksowy klon oprogramowania QuickPict przychodzącego z QuickCam
+Summary(pl.UTF-8):	Linuksowy klon oprogramowania QuickPict przychodzącego z QuickCam
 Name:		gqcam
 Version:	0.9
 Release:	2
