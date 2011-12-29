@@ -1,5 +1,3 @@
-# TODO
-# - v4l1 patch needed
 Summary:	A Linux clone of the QuickPict software that comes with the QuickCam
 Summary(pl.UTF-8):	Linuksowy klon oprogramowania QuickPict przychodzącego z QuickCam
 Name:		gqcam
@@ -12,6 +10,7 @@ Source0:	ftp://ftp.debian.org/debian/pool/main/g/gqcam/%{name}_%{version}.orig.t
 Patch0:		ftp://ftp.debian.org/debian/pool/main/g/gqcam/%{name}_%{version}-4.diff.gz
 # Patch0-md5:	7ab126a358fe2147a9f5a217b8b99c6c
 Patch1:		no-more-videodev_h.patch
+Patch2:		fixes.patch
 URL:		http://cse.unl.edu/~cluening/gqcam/
 BuildRequires:	gtk+-devel
 BuildRequires:	libjpeg-devel
@@ -66,6 +65,7 @@ Philips USB PCVC675K, Webcam III, TerraCAM USB, Plustek OptiCam 300U.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__make} \
