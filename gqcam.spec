@@ -11,6 +11,7 @@ Source0:	ftp://ftp.debian.org/debian/pool/main/g/gqcam/%{name}_%{version}.orig.t
 # Source0-md5:	d1f2eecec0dbd4dd88543986b47e2015
 Patch0:		ftp://ftp.debian.org/debian/pool/main/g/gqcam/%{name}_%{version}-4.diff.gz
 # Patch0-md5:	7ab126a358fe2147a9f5a217b8b99c6c
+Patch1:		no-more-videodev_h.patch
 URL:		http://cse.unl.edu/~cluening/gqcam/
 BuildRequires:	gtk+-devel
 BuildRequires:	libjpeg-devel
@@ -64,6 +65,7 @@ Philips USB PCVC675K, Webcam III, TerraCAM USB, Plustek OptiCam 300U.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} \

@@ -1,0 +1,103 @@
+--- gqcam-0.9.1/./gqcam.c~	2011-12-29 23:30:14.000000000 +0200
++++ gqcam-0.9.1/./gqcam.c	2011-12-29 23:30:55.283869869 +0200
+@@ -29,8 +29,7 @@
+ #include <pthread.h>
+ #include <semaphore.h>
+ #include <gtk/gtk.h>
+-#include <linux/types.h> 
+-#include <linux/videodev.h>
++#include <libv4l1.h>
+ #include <signal.h>
+ #include <png.h>
+ 
+--- gqcam-0.9.1/./frontend.c~	2011-12-29 23:30:14.000000000 +0200
++++ gqcam-0.9.1/./frontend.c	2011-12-29 23:31:11.887968672 +0200
+@@ -30,7 +30,7 @@
+ #include <linux/types.h> 
+ #include <gtk/gtk.h>
+ #include <glib.h>
+-#include <linux/videodev.h>
++#include <libv4l1.h>
+ #include <png.h>
+ 
+ #include "config.h"
+--- gqcam-0.9.1/./preferences.c~	2005-04-04 04:25:09.000000000 +0300
++++ gqcam-0.9.1/./preferences.c	2011-12-29 23:31:22.855140937 +0200
+@@ -30,7 +30,7 @@
+ #include <linux/types.h> 
+ #include <gtk/gtk.h>
+ #include <glib.h>
+-#include <linux/videodev.h>
++#include <libv4l1.h>
+ #include <png.h>
+ 
+ #include "gqcam.h"
+--- gqcam-0.9.1/./color.c~	2005-04-04 04:25:09.000000000 +0300
++++ gqcam-0.9.1/./color.c	2011-12-29 23:31:33.058944678 +0200
+@@ -10,7 +10,7 @@
+ #include <pthread.h>
+ #include <linux/types.h> 
+ #include <gtk/gtk.h>
+-#include <linux/videodev.h>
++#include <libv4l1.h>
+ #include <png.h>
+ 
+ #include "gqcam.h"
+--- gqcam-0.9.1/./greyscale.c~	2005-04-04 04:25:09.000000000 +0300
++++ gqcam-0.9.1/./greyscale.c	2011-12-29 23:31:41.766012749 +0200
+@@ -28,7 +28,7 @@
+ #include <pthread.h>
+ #include <linux/types.h> 
+ #include <gtk/gtk.h>
+-#include <linux/videodev.h>
++#include <libv4l1.h>
+ #include <png.h>
+ 
+ #include "gqcam.h"
+--- gqcam-0.9.1/./save.c~	2005-04-04 04:25:09.000000000 +0300
++++ gqcam-0.9.1/./save.c	2011-12-29 23:31:52.516508362 +0200
+@@ -27,8 +27,7 @@
+ #include <fcntl.h>
+ #include <pthread.h>
+ #include <gtk/gtk.h>
+-#include <linux/types.h> 
+-#include <linux/videodev.h>
++#include <libv4l1.h>
+ #include <stdio.h>
+ #include <jpeglib.h>
+ #include <png.h>
+--- gqcam-0.9.1/./timer.c~	2005-04-04 04:25:09.000000000 +0300
++++ gqcam-0.9.1/./timer.c	2011-12-29 23:32:00.806890556 +0200
+@@ -27,8 +27,7 @@
+ #include <fcntl.h>
+ #include <pthread.h>
+ #include <gtk/gtk.h>
+-#include <linux/types.h> 
+-#include <linux/videodev.h>
++#include <libv4l1.h>
+ #include <stdio.h>
+ #include <jpeglib.h>
+ #include <png.h>
+--- gqcam-0.9.1/./filters.c~	2005-04-04 04:25:09.000000000 +0300
++++ gqcam-0.9.1/./filters.c	2011-12-29 23:32:08.380573047 +0200
+@@ -29,8 +29,7 @@
+ #include <pthread.h>
+ #include <semaphore.h>
+ #include <gtk/gtk.h>
+-#include <linux/types.h> 
+-#include <linux/videodev.h>
++#include <libv4l1.h>
+ #include <signal.h>
+ #include <png.h>
+ 
+--- gqcam-0.9.1/./yuv_to_rgb.c~	2011-12-29 23:30:14.000000000 +0200
++++ gqcam-0.9.1/./yuv_to_rgb.c	2011-12-29 23:32:16.967635588 +0200
+@@ -21,7 +21,7 @@
+ #define OV511_ALLOW_CONVERSION
+ 
+ #include <sys/time.h>
+-#include <linux/videodev.h>
++#include <libv4l1.h>
+ 
+ #include "yuv_to_rgb.h"
+ 
