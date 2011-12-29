@@ -76,8 +76,9 @@ Philips USB PCVC675K, Webcam III, TerraCAM USB, Plustek OptiCam 300U.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 install -p gqcam $RPM_BUILD_ROOT%{_bindir}
+cp -p debian/gqcam.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -86,3 +87,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES INSTALL README README.threads
 %attr(755,root,root) %{_bindir}/gqcam
+%{_mandir}/man1/gqcam.1*
