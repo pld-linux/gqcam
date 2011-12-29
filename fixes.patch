@@ -9,3 +9,13 @@
      strcpy(camera->timer_struct.command, gtk_entry_get_text(GTK_ENTRY(camera->timer_struct.commandentry)));
      camera->timer_struct.iscommand = 1;
    }
+--- gqcam-0.9.1/jpeg.c~	2005-04-04 04:25:09.000000000 +0300
++++ gqcam-0.9.1/jpeg.c	2011-12-29 23:43:48.739527083 +0200
+@@ -1,6 +1,7 @@
+ /* jpeg decompression code added from libjpeg with original comments */
+ 
+ #include <stdio.h>
++#include <string.h>
+ 
+ #include "jpeg.h"
+ #define SIZEOF(object)	((size_t) sizeof(object))

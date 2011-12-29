@@ -2,7 +2,7 @@ Summary:	A Linux clone of the QuickPict software that comes with the QuickCam
 Summary(pl.UTF-8):	Linuksowy klon oprogramowania QuickPict przychodzącego z QuickCam
 Name:		gqcam
 Version:	0.9.1
-Release:	0.2
+Release:	0.3
 License:	GPL v2
 Group:		X11/Applications/Multimedia
 Source0:	ftp://ftp.debian.org/debian/pool/main/g/gqcam/%{name}_%{version}.orig.tar.gz
