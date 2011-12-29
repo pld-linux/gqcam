@@ -1,18 +1,17 @@
 Summary:	A Linux clone of the QuickPict software that comes with the QuickCam
 Summary(pl.UTF-8):	Linuksowy klon oprogramowania QuickPict przychodzącego z QuickCam
 Name:		gqcam
-Version:	0.9
-Release:	2
+Version:	0.9.1
+Release:	0.1
 License:	GPL
 Group:		X11/Applications/Multimedia
-Source0:	http://cse.unl.edu/~cluening/gqcam/download/%{name}-%{version}.tar.gz
-# Source0-md5:	6e9ab1d86d96776bd5436b0e42a9e6b7
+Source0:	ftp://ftp.debian.org/debian/pool/main/g/gqcam/%{name}_%{version}.orig.tar.gz
+# Source0-md5:	d1f2eecec0dbd4dd88543986b47e2015
 URL:		http://cse.unl.edu/~cluening/gqcam/
 BuildRequires:	gtk+-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Gqcam allows you to use web cams with Linux.
@@ -44,18 +43,15 @@ about:
   - TerraCAM USB
   - Plustek OptiCam 300U
 
-If you have gotten it work with a camera not listed here, feel free to
-let him know at <cluenin1@bigred.unl.edu>
-
 %description -l pl.UTF-8
 Gqcam pozwala na używanie kamer internetowych pod Linuksem.
 
 Możliwości: kontrola jasności, kontrastu i balansu bieli, 3 ustawienia
 rozmiaru, 2 ustawienia głębi, zamrażanie obrazu, zrzucanie obrazu (do
-formatu PNG, PPM lub JPEG) - także sterowane timerem, interfejs z linii
-poleceń, obsługa czarno-białych i kolorowych kamer QuickCam, a także
-kamer opartych na CPiA oraz większości innych obsługujących polecenie
-read().
+formatu PNG, PPM lub JPEG) - także sterowane timerem, interfejs z
+linii poleceń, obsługa czarno-białych i kolorowych kamer QuickCam, a
+także kamer opartych na CPiA oraz większości innych obsługujących
+polecenie read().
 
 Kamery o których wiadomo, że działają, to: Greyscale Quickcam i Color
 Quickcam; nie były testowane: Ezonics EZcam, Creative Web-Cam II,
@@ -72,8 +68,7 @@ Philips USB PCVC675K, Webcam III, TerraCAM USB, Plustek OptiCam 300U.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
-
-install gqcam $RPM_BUILD_ROOT%{_bindir}
+install -p gqcam $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
