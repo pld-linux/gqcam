@@ -5,9 +5,9 @@ Version:	0.9.1
 Release:	0.3
 License:	GPL v2
 Group:		X11/Applications/Multimedia
-Source0:	ftp://ftp.debian.org/debian/pool/main/g/gqcam/%{name}_%{version}.orig.tar.gz
+Source0:	http://ftp.debian.org/debian/pool/main/g/gqcam/%{name}_%{version}.orig.tar.gz
 # Source0-md5:	d1f2eecec0dbd4dd88543986b47e2015
-Patch0:		ftp://ftp.debian.org/debian/pool/main/g/gqcam/%{name}_%{version}-4.diff.gz
+Patch0:		http://ftp.debian.org/debian/pool/main/g/gqcam/%{name}_%{version}-4.diff.gz
 # Patch0-md5:	7ab126a358fe2147a9f5a217b8b99c6c
 Patch1:		no-more-videodev_h.patch
 Patch2:		fixes.patch
